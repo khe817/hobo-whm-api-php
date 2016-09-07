@@ -29,10 +29,12 @@ $cpanel_username = 'username'; // cPanel login username, enter if using cPanel A
 $whm_api = new WHM_API($host, $whm_username, $hash, $cpanel_username);
 
 // make a call
+$module = 'MysqlFE';
+$function = 'listdbs';
 $params = array(
 	'domain' => 'example.com',
 	);
-$test = $whm_api->cpanel_api2( 'MysqlFE', 'listdbs', $params);
+$test = $whm_api->cpanel_api2( $module, $function, $params);
 ```
 
 
