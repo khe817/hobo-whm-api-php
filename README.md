@@ -18,6 +18,9 @@ require 'class.whm_api.php';
 
 ### Usage ###
 
+See examples.php for full examples.
+
+Initialize:
 
 ```
 #!php
@@ -25,10 +28,15 @@ $host = '1.0.0.127'; // WHM IP address
 $whm_username = 'root'; // WHM login username, usually 'root' with full access permissions
 $hash = 'hash_or_pass'; // WHM password or a hash string from WHM >> Clusters >> Remote Access Key
 $cpanel_username = 'username'; // cPanel login username, enter if using cPanel API2 functions
-// initialize
-$whm_api = new WHM_API($host, $whm_username, $hash, $cpanel_username);
 
-// make a call
+$whm_api = new WHM_API($host, $whm_username, $hash, $cpanel_username);
+```
+
+Make a call to API:
+
+```
+#!php
+
 $module = 'MysqlFE';
 $function = 'listdbs';
 $params = array(
@@ -36,7 +44,6 @@ $params = array(
 	);
 $test = $whm_api->cpanel_api2( $module, $function, $params);
 ```
-
 
 ### Who do I talk to? ###
 
