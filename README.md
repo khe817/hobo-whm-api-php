@@ -10,9 +10,7 @@ Class for executing calls to WHM API, using cPanel API2 functions for the calls
 ### How do I get set up? ###
 
 
-```
-#!php
-<?php
+```php
 require 'class.whm_api.php';
 ```
 
@@ -22,9 +20,7 @@ See examples.php for full examples.
 
 Initialize:
 
-```
-#!php
-<?php
+```php
 $host = '1.0.0.127'; // WHM IP address
 $whm_username = 'root'; // WHM login username, usually 'root' with full access permissions
 $hash = 'hash_or_pass'; // WHM password or a hash string from WHM >> Clusters >> Remote Access Key
@@ -35,9 +31,7 @@ $whm_api = new WHM_API($host, $whm_username, $hash, $cpanel_username);
 
 Make a call to API:
 
-```
-#!php
-<?php
+```php
 $module = 'MysqlFE';
 $function = 'listdbs';
 $params = array(
